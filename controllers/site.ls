@@ -1,7 +1,7 @@
 {Controller,action} = require \gusto/lib/mvc/controller
-{any} = require \gusto/lib/server/router
+{alias} = require \gusto/lib/server/router
 exports.site = Controller {
-	index: any "home", action (self)->
+	index: alias "home", action (self)->
 		self.render greet:\world!
 	show: action id:Number, (self)->
 		arr =
